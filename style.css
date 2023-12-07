@@ -468,22 +468,10 @@ nav .fa-solid{
     
 }
 @media only screen and (max-width:450px){
-    .header-text{
-        margin-top:120%;
-        font-size:16px;
-        color: #fff;
-
+    .header-text h1,
+    .header-text p {
+        display: none;
     }
-    .header-text p{
-        margin-top:90%;
-        font-size:16px;
-        color: #fff;
-    }
-
-    .header-text h1{
-        font-size:30px;
-
-}
 }
 #msg{
     color:#37D90B;
