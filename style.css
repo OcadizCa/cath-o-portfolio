@@ -472,7 +472,33 @@ nav .fa-solid{
     margin-top:-20px;
     display:block;
 }
+.wave-effect {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .wave-effect:hover {
+    transform: scale(1.1);
+  }
+  
 
+#about .about-col-1 img {
+    transition: transform 0.3s ease-out; /* Agrega una transición suave */
+}
+
+/* Efecto de parallax al pasar el cursor */
+#about .about-col-1 img:hover {
+    transform: scale(1.1); /* Puedes ajustar el valor según tus preferencias */
+}
+
+/* Efecto Parallax */
+#portfolio .work-list .work img {
+    transition: transform 0.5s; /* Agrega una transición suave */
+}
+
+/* Efecto de parallax al pasar el cursor */
+#portfolio .work-list .work img:hover {
+    transform: scale(1.1); /* Puedes ajustar el valor según tus preferencias */
+}
 
 
 

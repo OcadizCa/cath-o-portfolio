@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img-portfolio/black-cat.png">
+
     <title>Cath.O</title>
     <link rel="link" href="img-portfolio/cat-solid.svg">
     <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="img-portfolio/catho-logo__1_-removebg-preview.png" class="logo">
+                <img src="img-portfolio/catho-logo__1_-removebg-preview.png" class="logo wave-effect">
                 <ul id="sidemenu">
                     
                     <li><a href="#about">Sobre mí</a></li>
@@ -36,7 +37,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="img-portfolio/cath.png" alt="usuario"> <!-- Added "alt" attribute -->
+                    <img src="img-portfolio/cath.png" alt="usuario" class="about-bg-image"> <!-- Added "alt" attribute -->
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">Sobre <span>mí</span></h1>
@@ -189,7 +190,7 @@ Como profesora independiente de violonchelo, impartí lecciones a estudiantes de
                     <textarea name="Mensaje" rows="6"placeholder="Mensaje"></textarea>
                     <button type="submit"class="btn btn2">Enviar</button>
                 </form>
-                <span id="msg">Hola</span>
+                <!--<span id="msg">Hola</span>-->
             </div>
         </div>
     </div>
@@ -198,17 +199,7 @@ Como profesora independiente de violonchelo, impartí lecciones a estudiantes de
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<script>
+<!--<script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -222,7 +213,7 @@ Como profesora independiente de violonchelo, impartí lecciones a estudiantes de
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab"); // Changed "getElementsById" to "getElementById"
     }
-</script>
+</script>-->
 <script>
     var sidemenu = document.getElementById("sidemenu");
 
@@ -233,26 +224,42 @@ Como profesora independiente de violonchelo, impartí lecciones a estudiantes de
         sidemenu.style.right = "-200px";
     }
 </script>
-
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwXdU_XlGuUwVZW19rIdbERq00VJXsf5AiR_XXIuRZ7oSIXXtTwQorrMFllDI13lzSu/exec';
     const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        const nombreRegex = /^[A-Za-z\s]+$/;
+        const nombreInput = form.elements['Nombre'];
+        if (!nombreRegex.test(nombreInput.value.trim())) {
+            alert('Por favor, ingrese un nombre válido.');
+            return;
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailInput = form.elements['email'];
+        if (!emailRegex.test(emailInput.value.trim())) {
+            alert('Por favor, ingrese una dirección de correo electrónico válida.');
+            return;
+        }
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+        })
         .then(response => {
-            msg.innerHTML = "Tu mensaje ha sido enviado exitosamente";
-            setTimeout(function(){
-                msg.innerHTML = "";
-            }, 5000);
+            console.log('Formulario enviado con éxito:', response);
+            alert('Tu mensaje ha sido enviado exitosamente.');
             form.reset();
         })
-        .catch(error => console.error('Error!', error.message));
+        .catch(error => console.error('Error al enviar el formulario:', error));
     });
 </script>
+
+
+
+
 
 <script src="https://kit.fontawesome.com/9a4c265035.js" crossorigin="anonymous"></script>
 
