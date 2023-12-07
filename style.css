@@ -469,13 +469,13 @@ nav .fa-solid{
 }
 @media only screen and (max-width:450px){
     .header-text{
-        margin-top:100%;
+        margin-top:120%;
         font-size:16px;
         color: #fff;
 
     }
     .header-text p{
-        margin-top:80%;
+        margin-top:90%;
         font-size:16px;
         color: #fff;
     }
