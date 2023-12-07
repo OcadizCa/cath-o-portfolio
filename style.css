@@ -4,6 +4,9 @@
     font-family: 'roboto','sans-serif';
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background:#0D0D0D;
@@ -17,6 +20,8 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+
 
 .container{
     padding:10px 10%;
@@ -32,16 +37,26 @@ nav{
     width:150px;
 }
 
+.logo {
+    width: 150px;
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+.logo:hover {
+    transform: rotate(360deg); /* Rota el logo 360 grados al pasar el cursor */
+}
+
+
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 15px;
 }
 
 nav ul li a{
     color: #0CE4E6;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     position:relative;
 }
 
@@ -64,11 +79,44 @@ nav ul li a:hover::after{
     font-size: 30px;
 }
 .header-text h1{
-    font-size: 60px;
+    font-size: 55px;
     margin-top: 20px;
 }
 .header-text h1 span{
     color:#0CE4E6;
+}
+.header-text p{
+    color:#E621AF;
+}
+.header-text p {
+    color: #E621AF; /* Color base del neon */
+    text-shadow: 0 0 10px #E621AF, 0 0 20px #E621AF, 0 0 30px #E621AF; /* Efecto de destello */
+    opacity: 0.8; /* Opacidad inicial */
+    animation: neonGlow 2s infinite alternate; /* Animación de encendido y apagado */
+}
+
+@keyframes neonGlow {
+    0%, 100% {
+        opacity: 0.8; /* Al inicio y al final, opacidad baja */
+    }
+    50% {
+        opacity: 1; /* A la mitad, opacidad alta para simular encendido */
+    }
+}
+.header-text h1 span {
+    color: #0CE4E6; /* Color base del neon */
+    text-shadow: 0 0 10px #0CE4E6, 0 0 20px #0CE4E6, 0 0 30px #0CE4E6; /* Efecto de destello */
+    opacity: 0.8; /* Opacidad inicial */
+    animation: neonGlow 2s infinite alternate; /* Animación de encendido y apagado */
+}
+
+@keyframes neonGlow {
+    0%, 100% {
+        opacity: 0.8; /* Al inicio y al final, opacidad baja */
+    }
+    50% {
+        opacity: 1; /* A la mitad, opacidad alta para simular encendido */
+    }
 }
 
 /*Sobre mi*/
@@ -290,9 +338,25 @@ p{
     color:#941BAF;
     transform: translateY(-5);
 }
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Eleva el icono 5px al pasar el cursor */
+}
+
+
+
+
+
 .btn.btn2{
     display: inline-block;
-    background-color:#941BAF;
+    background:#941BAF;
 }
 .contact-right form{
     width:100%
@@ -314,3 +378,101 @@ form .btn2{
     margin-top:20px;
     cursor: pointer;
 }
+.copyright{
+    width:100%;
+    text-align:Center;
+    padding:25px 0;
+    background: #262626;
+    font-weight:300;
+    margin-top:20px;
+}
+.copyright i{
+    color:#E621AF;
+}
+
+/*--------------------Responsive---------------------*/
+nav .fa-solid{
+    display:none;
+}
+
+
+
+@media only screen and (max-width:600px){
+    #header{
+        background-image:url(img-portfolio/cath-portafolio.png);
+    }
+    .header-text{
+        margin-top:80%;
+        font-size:16px;
+        color: #fff;
+
+    }
+    .header-text p{
+        margin-top:80%;
+        font-size:16px;
+        color: #fff;
+    }
+
+    .header-text h1{
+        font-size:30px;
+
+    }
+    nav .fa-solid{
+        display:block;
+        font-size:25px;
+        color:#37D90B;
+    }
+    nav ul {
+        background:#941BAF;
+        position: fixed; 
+        top: 0;
+        right: -200px;
+        width:200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index:2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis:100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size:14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    
+}
+#msg{
+    color:#37D90B;
+    margin-top:-20px;
+    display:block;
+}
+
+
+
+

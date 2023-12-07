@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cath.O</title>
+    <link rel="link" href="img-portfolio/cat-solid.svg">
     <link rel="stylesheet" href="style.css">
    
 </head>
@@ -12,18 +13,20 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="img-portfolio/catho-logo-removebg-preview.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre mí</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Portafolio</a></li>
-                    <li><a href="#">Contacto</a></li>
+                <img src="img-portfolio/catho-logo__1_-removebg-preview.png" class="logo">
+                <ul id="sidemenu">
+                    
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Desarrolladora Java Full Stack Jr.</p>
-                <h1>Hola, soy <span>Catalina</span><br>de Mexico</h1>
+                <h1>¡Hola, soy <span>Catalina</span><br>Creadora de Código!</h1>
             </div>
         </div>
     </div>
@@ -37,7 +40,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">Sobre <span>mí</span></h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quam similique, illum quod aliquid reiciendis commodi, voluptates tempora esse atque libero! Explicabo sequi cum saepe reprehenderit, deleniti natus sapiente a.</p>
+                    <p>¡Hola! Soy Catalina, y me apasiona el mundo del desarrollo de software, especialmente Java Fullstack y COBOL. Creo firmemente en la importancia de mantener y modernizar sistemas críticos para el negocio. Mi enfoque se centra en la entrega de soluciones de alta calidad y valor. Disfruto colaborando en equipos multidisciplinarios para alcanzar objetivos comunes y estoy ansiosa por conectar con otros profesionales apasionados por el desarrollo de software. ¡No dudes en contactarme si te gustaría explorar oportunidades juntos!</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
                         <p class="tab-links" onclick="opentab('experience')">Experiencia</p>
@@ -45,25 +48,54 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Desarrolladora web</span><br>Java Developer Full Stack Jr.</li>
-                            <li><span>Desarrolladora web</span><br>Java Developer Full Stack Jr.</li>
-                            <li><span>Desarrolladora web</span><br>Java Developer Full Stack Jr.</li>
+                            <li><span>Adaptabilidad</span><br>Capaz de adaptarme fluidamente a nuevas tecnologías y entornos de desarrollo web para abordar desafíos de manera eficiente</li>
+                            <li><span>Comunicación efectiva</span><br>Facilito una comunicación clara y colaborativa con los miembros del equipo y clientes, asegurando una comprensión completa de los requisitos del proyecto.</li>
+                            <li><span>Enfoque a resultado </span><br>Impulsada por la entrega exitosa de proyectos web, con un enfoque meticuloso en la eficiencia del código y la satisfacción del cliente.</li>
+                            <li><span>Orientación al detalle </span><br>Atención minuciosa a los detalles en el diseño, desarrollo y pruebas de aplicaciones web, asegurando la calidad y funcionalidad en cada aspecto del desarrollo.</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2017 - 2021</span><br>Java Developer Full Stack Jr.</li>
-                            <li><span>2012 - 2015</span><br>Java Developer Full Stack Jr.</li>
-                            <li><span>2012 - 2016</span><br>Java Developer Full Stack Jr.</li>
+                            <li><span>Septiembre - Diciembre 2023 </span><br>Ferreteria "el Precio Justo"
+                            <p>
+                                Colaboré en el desarrollo de un ecommerce de ferretería en Nuevo León, México, utilizando HTML, CSS, JavaScript, Bootstrap, Java, Spring Boot y MySQL. Trabajé bajo la metodología Scrum, mejorando habilidades blandas como comunicación en equipo y resolución de problemas. Adquirí la capacidad de adaptarme ágilmente a cambios en un entorno colaborativo.
+
+                            </p>
+                            
+                            
+                            </li>
+                            <li><span>2017 - 2021</span><br>Secomsa-Group
+                            <p>
+                                Como Analista de Compras gestioné el proceso de adquisición de suministros y materiales. Colaboré estrechamente con otros departamentos para entender y satisfacer sus necesidades de abastecimiento, implementando estrategias de optimización de costos y mejora de la eficiencia en el proceso de compras.
+                                
+                            </p>
+                            </li>
+                            <li><span>2012 - 2016</span><br>Profesora de violoncello
+                            <p>
+                                
+Como profesora independiente de violonchelo, impartí lecciones a estudiantes de diversos niveles, diseñando planes de estudio personalizados para fomentar su crecimiento técnico y artístico. Esta experiencia me proporcionó una perspectiva valiosa sobre la enseñanza y el desarrollo musical individual.
+                            </p>
+                            
+                            </li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2023</span><br>Java Developer Full Stack Jr.</li>
-                            <li><span>2021</span><br>Java Developer Full Stack Jr.</li>
-                            <li><span>2012</span><br>Java Developer Full Stack Jr.</li>
+                            <li><span>Mayo 2023</span><br>Licenciatura en Programación y Transformación Digital (en línea)
+                            <p>Escuela Bancaria y Comercial </p>
+                            </li>
+                            <li><span>2023</span><br>Amazon Web Services
+                            <p>
+                                AWS Academy Cloud Foundations
+                            </p>
+                            </li>
+                            <li><span>27/10/2023</span><br>PCAP: Programming Essentials in Python
+                            <p>
+                                Cisco Networking Academy 
+                            </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -78,20 +110,20 @@
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Diseño Web</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo voluptatum consectetur vitae, obcaecati magnam et eveniet non quaerat, dolorum labore laudantium tempore accusantium exercitationem provident placeat recusandae odio voluptates corporis.</p>
-                <a href="#">learn more</a>
+                <p>Creación de sitios web atractivos y funcionales desde cero, utilizando HTML, CSS, JavaScript y Bootstrap para lograr un diseño responsive y una experiencia de usuario óptima.</p>
+                <a href="#portfolio">Ver más</a>
             </div>
             <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2>Design</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo voluptatum consectetur vitae, obcaecati magnam et eveniet non quaerat, dolorum labore laudantium tempore accusantium exercitationem provident placeat recusandae odio voluptates corporis.</p>
-                <a href="#">learn more</a>
+                <i class="fa-solid fa-rocket"></i>
+                <h2>Desarrollo de Landing Page</h2>
+                <p>Diseño y desarrollo de páginas de aterrizaje efectivas para campañas de marketing, utilizando Bootstrap y optimizando la presentación visual con CSS.</p>
+                <a href="#portfolio">Ver más</a>
             </div>
             <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>Design</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo voluptatum consectetur vitae, obcaecati magnam et eveniet non quaerat, dolorum labore laudantium tempore accusantium exercitationem provident placeat recusandae odio voluptates corporis.</p>
-                <a href="#">learn more</a>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h2>Optimización del Rendimiento del Sitio</h2>
+                <p>Mejora del rendimiento del sitio web mediante la optimización del código, la compresión de imágenes y la implementación de prácticas recomendadas para la velocidad de carga.</p>
+                <a href="#portfolio">Ver más</a>
             </div>
         </div>
     </div>
@@ -102,29 +134,29 @@
         <h1 class="sub-title">Portafolio</h1>
         <div class="work-list">
         <div class="work">
-            <img src="img-portfolio/work-1.png" alt="">
+            <img src="img-portfolio/comunitario.png" alt="">
             <div class="layer">
                 <h3>Centro Comunitario</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quod molestias quasi, maxime, voluptatem dolorum labore eveniet minima velit qui mollitia corporis eaque, quas natus at? Laborum harum illum ipsum.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <p>Proyecto personal dedicado a la creación de un Centro Comunitario para la Mujer, un espacio virtual diseñado para empoderar, apoyar y conectar a mujeres de diversas comunidades.</p>
+                <a href="https://github.com/OcadizCa/secompsa-group.github.io"target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 
               </div>
             </div>
         <div class="work">
-                <img src="img-portfolio/work-2.png" alt="">
+                <img src="img-portfolio/secomsa.png" alt="">
                 <div class="layer">
                     <h3>Secomsa Group</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quod molestias quasi, maxime, voluptatem dolorum labore eveniet minima velit qui mollitia corporis eaque, quas natus at? Laborum harum illum ipsum.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>página web de SECOMSA Group, la empresa líder en el desarrollo de autobuses eléctricos y vehículos eléctricos, representa un proyecto donde la innovación y la sostenibilidad convergen.</p>
+                    <a href="https://github.com/OcadizCa/secompsa-group.github.io"target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     
                   </div>
                 </div>
         <div class="work">
-                    <img src="img-portfolio/work-3.png" alt="">
+                    <img src="img-portfolio/elprecio-justo.png" alt="">
                     <div class="layer">
                         <h3>Ferreteria el Precio Justo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quod molestias quasi, maxime, voluptatem dolorum labore eveniet minima velit qui mollitia corporis eaque, quas natus at? Laborum harum illum ipsum.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>Colaboré en el desarrollo de un ecommerce de ferretería en Nuevo León, México, utilizando HTML, CSS, JavaScript, Bootstrap, Java, Spring Boot y MySQL.</p>
+                        <a href="https://ch33-team-6.github.io/Proyecto-Ferreteria/nosotras.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         
                       </div>
             </div>
@@ -138,27 +170,31 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contactame</h1>
+                <h1 class="sub-title">Contáctame</h1>
                 <p><i class="fa-solid fa-paper-plane"></i>ocadiz.ca@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i>5567082257</p>
                 <div class="social-icons">
                     <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                     <a href=""><i class="fa-brands fa-x-twitter"></i></i></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin-in"></i></i></a>
+                    <a href="https://www.linkedin.com/in/catalina-aide-ocadiz-mora-594274253/" target="_blank" ><i class="fa-brands fa-linkedin-in"></i></i></a>
                 </div>
-            <a href="" download class="btn btn2">Descarga mi CV</a>
+            <a href="img-portfolio/Catalina-Ocadiz-CV.pdf" download class="btn btn2">Descarga mi CV</a>
 
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Nombre" placeholder="Nombre"required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="Mensaje" rows="6"placeholder="Mensaje"></textarea>
                     <button type="submit"class="btn btn2">Enviar</button>
                 </form>
+                <span id="msg">Hola</span>
             </div>
         </div>
+    </div>
+    <div class="copyright">
+        <p>Copyrigth © Cath.O. Hecho con <i class="fa-solid fa-heart"></i> </p>
     </div>
 </div>
 
@@ -187,6 +223,37 @@
         document.getElementById(tabname).classList.add("active-tab"); // Changed "getElementsById" to "getElementById"
     }
 </script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwXdU_XlGuUwVZW19rIdbERq00VJXsf5AiR_XXIuRZ7oSIXXtTwQorrMFllDI13lzSu/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Tu mensaje ha sido enviado exitosamente";
+            setTimeout(function(){
+                msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
 <script src="https://kit.fontawesome.com/9a4c265035.js" crossorigin="anonymous"></script>
 
 </body>
